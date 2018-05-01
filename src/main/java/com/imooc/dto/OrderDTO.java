@@ -1,6 +1,7 @@
 package com.imooc.dto;
 
 import com.imooc.dataobject.OrderDetail;
+import lombok.Data;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -10,6 +11,7 @@ import java.util.List;
  * @Author: dealsky
  * @Date: 2018/4/25 10:57
  */
+@Data
 public class OrderDTO {
 
     /**
