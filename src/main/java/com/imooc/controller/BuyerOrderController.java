@@ -65,7 +65,22 @@ public class BuyerOrderController {
     }
 
     // 订单详情
+    @GetMapping("/detail")
+    public ResultVO<OrderDTO> detail(String openid, String orderId) {
+        // TODO 不安全做法,改进
+        OrderDTO orderDTO = orderService.findOne(orderId);
+        return ResultVOUtil.success(orderDTO);
+    }
 
     // 取消订单
+    @PostMapping("/cancel")
+    public ResultVO cancel(String openid, String orderId) {
+        // TODO 不安全做法,改进
+        OrderDTO orderDTO = orderService.findOne(orderId);
+        orderService.cancel(orderDTO);
+
+        return ResultVOUtil.success();
+    }
+
 
 }
