@@ -9,11 +9,16 @@ import org.springframework.stereotype.Component;
  */
 @Data
 @Component
-@ConfigurationProperties(prefix = "wechat")
-public class WechatAccountConfig {
+@ConfigurationProperties(prefix = "wechat.pay")
+public class WechatPayAccount {
 
     private String mpAppId;
 
-    private String mpAppSecret;
+    private String mchId;
 
+    private String mchKey;
+
+    private String keyPath;
+
+    private String notifyUrl;
 }
