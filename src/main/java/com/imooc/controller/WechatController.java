@@ -74,11 +74,10 @@ public class WechatController {
             log.info("【微信网页授权】{}", e);
             throw new SellException(ResultEnum.WECHAT_MP_ERROR.getCode(), e.getError().getErrorMsg());
         }
-        log.info("wxMpOAuth2AccessToken={}", wxMpOAuth2AccessToken);
         String openId = wxMpOAuth2AccessToken.getOpenId();
 
         if (StringUtils.isEmpty(returnUrl)) {
-            returnUrl = projectUrlConfig.getSell() + "/sell/seller/order/list";
+            returnUrl = projectUrlConfig.getSell() + "/sell/seller/login";
         }
         return "redirect:" + returnUrl + "?openid=" + openId;
     }
