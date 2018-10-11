@@ -20,3 +20,11 @@ wechat:
     mchKey: C5245D70627C1F8E9964D494B0735025
     keyPath: /Users/dealsky/path/h5.p12
     notifyUrl: http://dealsky.s1.natapp.cc/sell/pay/notify
+  open:
+    mpAppId: wx6ad144e54af67d87
+    mpAppSecret: 91a2ff6d38a2bbccfb7e9f9079108e2e
+
+projectUrl:
+  wechatMpAuthorize: http://dealsky.s1.natapp.cc
+  wechatOpenAuthorize: http://sell.springboot.cn/sell/qr/oTgZpwa25_IEMD0NlpdT086j_110
+  sell: http://dealsky.s1.natapp.cc
