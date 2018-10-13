@@ -6,14 +6,13 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/sell?characterEncoding=utf-8&useSSL=false
   jpa:
     show-sql: true
+  jackson:
+    default-property-inclusion: non_null
   redis:
     host: dealsky.top
     port: 6379
-  jackson:
-    default-property-inclusion: non_null
 server:
   context-path: /sell
-
 wechat:
   mpAppId: wx0381d394124496f2
   mpAppSecret: 1ca798a76360d378be53ebd907885fa2
@@ -28,7 +27,6 @@ wechat:
   open:
     mpAppId: wx6ad144e54af67d87
     mpAppSecret: 91a2ff6d38a2bbccfb7e9f9079108e2e
-
 projectUrl:
   wechatMpAuthorize: http://dealsky.s1.natapp.cc
   wechatOpenAuthorize: http://sell.springboot.cn/sell/qr/oTgZpwa25_IEMD0NlpdT086j_110

@@ -28,24 +28,24 @@
                         </tr>
                         </thead>
                         <tbody>
-                <#list orderDTOPage.content as orderDTO>
-                <tr>
-                    <td>${orderDTO.orderId}</td>
-                    <td>${orderDTO.buyerName}</td>
-                    <td>${orderDTO.buyerPhone}</td>
-                    <td>${orderDTO.buyerAddress}</td>
-                    <td>${orderDTO.orderAmount}</td>
-                    <td>${orderDTO.getOrderStatusEnum().message}</td>
-                    <td>${orderDTO.getPayStatusEnum().message}</td>
-                    <td>${orderDTO.createTime}</td>
-                    <td><a href="/sell/seller/order/detail?orderId=${orderDTO.orderId}">详情</a></td>
-                    <td>
-                        <#if orderDTO.getOrderStatusEnum().message == "新订单">
-                            <a href="/sell/seller/order/cancel?orderId=${orderDTO.orderId}">取消</a>
-                        </#if>
-                    </td>
-                </tr>
-                </#list>
+                        <#list orderDTOPage.content as orderDTO>
+                        <tr>
+                            <td>${orderDTO.orderId}</td>
+                            <td>${orderDTO.buyerName}</td>
+                            <td>${orderDTO.buyerPhone}</td>
+                            <td>${orderDTO.buyerAddress}</td>
+                            <td>${orderDTO.orderAmount}</td>
+                            <td>${orderDTO.getOrderStatusEnum().message}</td>
+                            <td>${orderDTO.getPayStatusEnum().message}</td>
+                            <td>${orderDTO.createTime}</td>
+                            <td><a href="/sell/seller/order/detail?orderId=${orderDTO.orderId}">详情</a></td>
+                            <td>
+                                <#if orderDTO.getOrderStatusEnum().message == "新订单">
+                                    <a href="/sell/seller/order/cancel?orderId=${orderDTO.orderId}">取消</a>
+                                </#if>
+                            </td>
+                        </tr>
+                        </#list>
                         </tbody>
                     </table>
                 </div>
@@ -91,7 +91,7 @@
                 你有新的订单
             </div>
             <div class="modal-footer">
-                <button onclick="javascript:document.getElementById('notice').parse()" type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button onclick="javascript:document.getElementById('notice').pause()" type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
                 <button onclick="location.reload()" type="button" class="btn btn-primary">查看新的订单</button>
             </div>
         </div>
@@ -100,7 +100,7 @@
 
 <#--播放音乐-->
 <audio id="notice" loop>
-    <source src="/sell/static/mp3/song.mp3" type="audio/mpeg">
+    <source src="/sell/mp3/song.mp3" type="audio/mpeg">
 </audio>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
