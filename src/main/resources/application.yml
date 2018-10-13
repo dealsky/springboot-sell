@@ -31,3 +31,8 @@ projectUrl:
   wechatMpAuthorize: http://dealsky.s1.natapp.cc
   wechatOpenAuthorize: http://sell.springboot.cn/sell/qr/oTgZpwa25_IEMD0NlpdT086j_110
   sell: http://dealsky.s1.natapp.cc
+logging:
+  level:
+    com.imooc.dataobject.mapper: trace
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
