@@ -1,12 +1,14 @@
 package com.imooc.exception;
 
 import com.imooc.enums.ResultEnum;
+import lombok.Getter;
 import org.omg.SendingContext.RunTime;
 
 /**
  * @Author: dealsky
  * @Date: 2018/5/1 18:17
  */
+@Getter
 public class SellException extends RuntimeException {
 
     private Integer code;
